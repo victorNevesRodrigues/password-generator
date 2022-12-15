@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("./assets/back1.jpg");
+    background-size: cover;
+}
+
+.passwordGeneratorContainer {
+    width: 50rem;
+    background-color: #acca;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+}
+
+.passwordGeneratorContainer h1 {
+    border-bottom: 0.1rem solid #d4dbe5;
+    padding: 2rem 0rem;
+    margin-bottom: 2rem;
+}
+
+.resultContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.resultContainer input {
+    width: 100%;
+    height: 5.3rem;
+    color: #000;
+    background-color: none;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #aaa;
+    padding: 0rem 2rem;
+}
+
+.resultContainer img {
+    width: 30px;
+    position: absolute;
+    right: 3rem;
+    cursor: pointer;
+
+}
+
+.resultContainer img:hover {
+    opacity: 0.7;
+}
+
+.inputContainer {
+    padding: 0rem 2.5rem;
+}
+
+.passwordStrengthIndicator {
+    width: 100%;
+    height: 0.4rem;
+    position: relative;
+    background-color: #dfdfdf;
+    border-radius: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.passwordStrengthIndicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    background-color: #f1c80b;
+    left: 0;
+}
+
+.passwordStrengthIndicator#weak::before {
+    transition: 0.3s ease;
+    width: 20%;
+    background-color: #f00;
+}
+
+.passwordStrengthIndicator#medium::before {
+    transition: 0.3s ease;
+    width: 50%;
+    background-color: #ff0;
+}
+
+.passwordStrengthIndicator#strong::before {
+    transition: 0.3s ease;
+    width: 100%;
+    background-color: #00f;
+}
+
+.passwordLengthContainer div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.passwordLengthContainer input {
+    width: 100%;
+}
+
+.passwordSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.passwordSettings .options {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option {
+    display: flex;
+    column-gap: 0.7rem;
+    width: calc(100% / 2);
+    margin-bottom: 1rem;
+}
+
+.option label, .option input {
+    cursor: pointer;
+}
+
+.generateButton {
+    cursor: pointer;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.5rem 0rem;
+    margin-top: 1rem;
+    background-color: #4285f4;
+    border-radius: 0.5rem;
+    color: #fff;
+    border: none;
+}
+
+.generateButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 1440px) {
+    body {
+        background-size: initial;
+    }
+}
+
+@media (max-width: 510px) {
+     .option {
+        width: 100%;
+    }
+}
+
+@media (max-width: 424px) {
+    .resultContainer input {
+        padding: 0rem 0.5rem;
+        font-size: 1.6rem;
+    }
+
+    .resultContainer img {
+        right: 1rem;
+    }
+
+    .passwordGeneratorContainer {
+        height: 100vh;
+        margin-top: 0rem;
+        border-radius: initial;
+        width: 100%;
+    }
+}

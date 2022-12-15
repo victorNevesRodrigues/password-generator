@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="passwordGeneratorContainer">
+        <h1>Gerador de Senhas</h1>
+        <div class="inputContainer">
+
+            <div class="resultContainer">
+                <input type="text" value="e7_465174as2*wqsas481" disabled>
+                <img src="./assets/copy.svg" alt="botão para copiar a senha">
+            </div>
+
+            <div class="passwordStrengthIndicator"></div>
+
+            <div class="passwordLengthContainer">
+                <div>
+                    <p>Número de caracteres</p>
+                    <p class="rangeShow">15</p>
+                </div>
+                <input type="range" min="1" max="26" step="1">
+            </div>
+
+            <div class="passwordSettings">
+                <p>Configurações da Senha</p>
+                <ul class="options">
+                    <li class="option" style="pointer-events: none;">
+                        <input type="checkbox" id="lowerCase" checked>
+                        <label for="lowerCase">Letras Minúsculas(a-z)</label>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="number">
+                        <label for="number">Numeros(0-9)</label>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="excludeDuplicate">
+                        <label for="excludeDuplicate">Excluir Repetidos</label>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="upperCase">
+                        <label for="upperCase">Letras Maiúsculas (A-Z)</label>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Símbolos (!-$^+)</label>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="spaces">
+                        <label for="spaces">Incluir Espaços</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="generateButton">Gerar a Senha</button>
+
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
