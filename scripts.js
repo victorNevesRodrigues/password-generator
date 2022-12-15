@@ -21,6 +21,7 @@ function passwordStrengthIndicatorUpdate () {
 function updateSlider () {
     passwordLenghtRangeShow.textContent = passwordLengthRange.value
     passwordStrengthIndicatorUpdate()
+    generatePassword()
 }
 
 function generatePassword () {
